@@ -1,11 +1,11 @@
 ---
-title: Welcome
+title: MyFHMY
 layout: home
-description: The largest collection of free stuff on the internet!
+description: My personal free media wiki
 
 hero:
-  name: freemediaheckyeah
-  tagline: The largest collection of free stuff on the internet!
+  name: MyFHMY
+  tagline: Your own free media & tools collection
   announcement:
     title: Keep Android Open 🔓
     link: /posts/KeepAndroidOpen
