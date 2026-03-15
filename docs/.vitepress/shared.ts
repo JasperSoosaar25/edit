@@ -63,8 +63,8 @@ export const commitRef =
 export const feedback = `<a href="/feedback" class="feedback-footer">Made with ❤</a>`
 
 export const socialLinks: DefaultTheme.SocialLink[] = [
-    { icon: 'github', link: 'https://github.com/fmhy/edit' },
-    { icon: 'discord', link: 'https://github.com/fmhy/FMHY/wiki/FMHY-Discord' },
+    { icon: 'github', link: '' },
+    { icon: 'discord', link: '' },
     {
         icon: 'reddit',
         link: 'https://reddit.com/r/FREEMEDIAHECKYEAH'
