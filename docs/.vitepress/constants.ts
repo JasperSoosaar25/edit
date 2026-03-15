@@ -1,23 +1,21 @@
 /**
- *  Copyright (c) 2025 taskylizard. Apache License 2.0.
+ * Copyright (c) 2025 taskylizard. Apache License 2.0.
  *
- *  Licensed under the Apache License, Version 2.0 (the "License");
- *  you may not use this file except in compliance with the License.
- *  You may obtain a copy of the License at
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
  *
- *  http://www.apache.org/licenses/LICENSE-2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
  *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- *  limitations under the License.
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  */
-
 import type { DefaultTheme } from 'vitepress'
 import { excluded } from './shared'
 import { transform, transformGuide } from './transformer'
-
 // @unocss-include
 
 export * from './shared'
@@ -31,12 +29,10 @@ export const search: DefaultTheme.Config['search'] = {
         relativePath.includes(excludedFile) ||
         relativePath.endsWith(excludedFile)
       )
-
       // Return empty content for excluded files so they don't appear in search
       if (shouldExclude) {
         return ''
       }
-
       let contents = src
       // I do this as env.frontmatter is not available until I call `md.render`
       if (contents.includes('Beginners Guide'))
@@ -47,7 +43,7 @@ export const search: DefaultTheme.Config['search'] = {
     },
     miniSearch: {
       options: {
-        tokenize: (text) => text.replace(/[\u2060\u200B]/g, '').split(/[\n\r #%*,=/:;?[\]{}()&]+/u), // simplified charset: removed [-_.@] and non-english chars (diacritics etc.)
+        tokenize: (text) => text.replace(/[\u2060\u200B]/g, '').split(/[\n\r #%*,=/:;?[\]{}()&]+/u),
         processTerm: (term, fieldName) => {
           // biome-ignore lint/style/noParameterAssign: h
           term = term
@@ -67,7 +63,6 @@ export const search: DefaultTheme.Config['search'] = {
             'you'
           ]
           if (term.length < 2 || stopWords.includes(term)) return false
-
           if (fieldName === 'text') {
             const parts = term.split('.')
             if (parts.length > 1) {
@@ -92,14 +87,12 @@ export const search: DefaultTheme.Config['search'] = {
           if (documentId.match(/\/posts/)) return -5
           // Downrank /other
           if (documentId.match(/\/other/)) return -5
-
           // Uprate if term appears in titles. Add bonus for higher levels (i.e. lower index)
           const titleIndex =
             titles
               .map((t, i) => (t?.includes(term) ? i : -1))
               .find((i) => i >= 0) ?? -1
           if (titleIndex >= 0) return 10000 - titleIndex
-
           return 1
         }
       }
