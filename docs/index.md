@@ -24,7 +24,7 @@ hero:
       link: /other/contributing
     - theme: alt
       text: Discord ;3
-      link: https://discord.gg/your-discord-invite
+      link: https://discord.gg/xCHFq2gk
 features:
   - title: Adblocking / Privacy :3
     link: /privacy
