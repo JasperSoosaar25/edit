@@ -1,17 +1,17 @@
 ---
-title: MyFMHY
+title: MyFMHY:3
 layout: home
-description: My personal free media wiki
+description: My personal free media wiki;333333
 
 hero:
-  name: MyFMHY
-  tagline: Your own free media & tools collection
+  name: MyFMHY:3
+  tagline: My own free media & tools collection;333333
   announcement:
     title: Keep Android Open 🔓
     link: /posts/KeepAndroidOpen
   image:
     src: test.png
-    alt: MyFMHY
+    alt: MyFMHY;33
   actions:
     - theme: brand
       text: See Beginners Guide
