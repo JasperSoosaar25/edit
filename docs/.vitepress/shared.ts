@@ -68,7 +68,7 @@ export const socialLinks: DefaultTheme.SocialLink[] = [
     },
     { 
         icon: 'discord', 
-        link: 'https://discord.gg/YOUR-REAL-INVITE-HERE'   // ← CHANGE THIS TO YOUR DISCORD
+        link: 'https://discord.gg/xCHFq2gk' 
     },
     {
         icon: 'reddit',
