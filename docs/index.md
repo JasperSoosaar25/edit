@@ -1,17 +1,17 @@
 ---
-title: MyFHMY
+title: MyFMHY
 layout: home
 description: My personal free media wiki
 
 hero:
-  name: MyFHMY
+  name: MyFMHY
   tagline: Your own free media & tools collection
   announcement:
     title: Keep Android Open 🔓
     link: /posts/KeepAndroidOpen
   image:
     src: test.png
-    alt: FMHY Icon
+    alt: MyFMHY
   actions:
     - theme: brand
       text: See Beginners Guide
@@ -24,7 +24,7 @@ hero:
       link: /other/contributing
     - theme: alt
       text: Discord
-      link: https://github.com/fmhy/FMHY/wiki/FMHY-Discord
+      link: https://discord.gg/your-discord-invite
 
 features:
   - title: Adblocking / Privacy
